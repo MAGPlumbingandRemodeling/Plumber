@@ -699,6 +699,227 @@
         max-width: 400px;
     }
 }
+/* --- REVIEWS SECTION STYLES --- */
+.reviews-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.reviews-tag {
+    color: #0056b3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.reviews-title {
+    font-size: 2.5rem;
+    color: #00204a;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.reviews-title span {
+    color: #00aaff;
+}
+
+.reviews-lead {
+    color: #666;
+    max-width: 650px;
+    margin: 15px auto 0;
+}
+
+/* Review Cards Grid */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 4px;
+    border: 1px solid #e2e8h0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    border-color: #00aaff;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.star-rating {
+    color: #00aaff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    font-style: italic;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.reviewer-footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+}
+
+.reviewer-name {
+    display: block;
+    font-weight: 800;
+    color: #00204a;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.reviewer-type {
+    display: block;
+    color: #00aaff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+        /* --- FOOTER STYLES --- */
+.site-footer {
+    background-color: #001530; /* Darker Blue for professional look */
+    color: #ffffff;
+    padding: 80px 0 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1); /* Logo ko white karne ke liye (if needed) */
+}
+
+.footer-about {
+    color: #a0aec0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-title {
+    color: #00aaff;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+/* Links & List Styling */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: #cbd5e0;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Map Styling */
+.map-wrapper {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 170, 255, 0.3);
+    line-height: 0;
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+    background: #000b1a;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Fix */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .bottom-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
     </style>
 </head>
 <body>
@@ -912,3 +1133,84 @@
         </div>
     </div>
 </section>
+<section id="reviews" class="reviews-section">
+    <div class="container">
+        <div class="reviews-header">
+            <span class="reviews-tag">Verified Feedback</span>
+            <h2 class="reviews-title">What Our <span>Customers Say</span></h2>
+            <p class="reviews-lead">Quality plumbing, flooring, and painting—built on a foundation of trust in Annandale.</p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="star-rating">★★★★★</div>
+                <p class="review-text">"MAG Plumbing saved us during a major leak. They arrived on time, diagnosed the issue with surgical precision, and fixed it fast. Highly recommend their plumbing expertise!"</p>
+                <div class="reviewer-footer">
+                    <span class="reviewer-name">John D.</span>
+                    <span class="reviewer-type">Homeowner</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="star-rating">★★★★★</div>
+                <p class="review-text">"We hired them for both flooring and painting during our kitchen remodel. The attention to detail was incredible. Our house looks brand new, and the process was seamless."</p>
+                <div class="reviewer-footer">
+                    <span class="reviewer-name">Amanda W.</span>
+                    <span class="reviewer-type">Residential Client</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="star-rating">★★★★★</div>
+                <p class="review-text">"Professional, clean, and transparent with pricing. It's hard to find contractors you can trust with your keys, but MAG is definitely one of them. Excellent service!"</p>
+                <div class="reviewer-footer">
+                    <span class="reviewer-name">Robert S.</span>
+                    <span class="reviewer-type">Commercial Manager</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container footer-grid">
+        
+        <div class="footer-col">
+            <img src="https://magplumbing.com/wp-content/uploads/sites/1206/2018/10/Logo4.png" alt="MAG Plumbing Logo" class="footer-logo">
+            <p class="footer-about">Expert plumbing, premium flooring, and professional painting services delivered with surgical precision across Annandale and surrounding areas.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="footer-title">Navigation</h4>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#reviews">Client Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="footer-title">Contact Us</h4>
+            <div class="footer-contact">
+                <p><strong>Phone:</strong> <br><a href="tel:7033866322">(703) 386-6322</a></p>
+                <p><strong>Email:</strong> <br><a href="mailto:mag@magplumbing.com">mag@magplumbing.com</a></p>
+                <p><strong>Address:</strong> <br>4910 Wakefield Chapel Rd <br> Annandale, VA 22003</p>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="footer-title">Our Location</h4>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99445.76188468165!2d-77.18352145!3d38.8397875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64d06165f04ff%3A0xf81897845137a513!2sMAG%20Plumbing%20%26%20Remodeling!5e0!3m2!1sen!2s!4v1778265013932!5m2!1sen!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container bottom-flex">
+            <p>&copy; 2026 MAG Plumbing. All Rights Reserved.</p>
+            <p class="credit">Developed by <span style="color: #00aaff; font-weight: 700;">SEO Expert</span></p>
+        </div>
+    </div>
+</footer>
